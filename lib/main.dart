@@ -4,6 +4,7 @@ import 'package:flutter_projects/views/home_last_update.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
 import 'package:flutter_projects/views/onboarding_page.dart';
+import 'package:flutter_projects/views/profile_homepage.dart';
 import 'package:get/get.dart';
 
 import 'views/bank_account_page.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
       // home: GetStartedHomeClass(),
       //  home: MenuHomeClass(),
       // home: LastUpdatePage(),
-      home: LoninPageClass(),
+      // home: LoninPageClass(),
+      home: ProfileHomePageClass(),
     );
   }
 }
