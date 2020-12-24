@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
 import 'package:get/get.dart';
 
-class GetStartedHomeClass extends StatelessWidget {
+class SignUpHomeClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +31,8 @@ class GetStartedHomeClass extends StatelessWidget {
 
                       //Title widget=================================
                       Container(
-                        // margin: EdgeInsets.only(top: 350,),
-                        padding: EdgeInsets.only(left: 24),
+                        alignment: Alignment.topLeft,
+                        padding: EdgeInsets.only(left: 24,bottom: 20),
                         child: Text(
                           "Get Started",
                           style: TextStyle(

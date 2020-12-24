@@ -1,21 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/list_tile_widget.dart';
 import 'package:flutter_projects/core/listview_widgets.dart';
-import 'package:flutter_projects/views/home_last_update.dart';
+import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:get/get.dart';
 class MenuHomeClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff1E32FA),
-      // appBar: AppBar(
-      //   backgroundColor: Color(0xff1E32FA),
-      //   elevation: 0,
-      //   leading: CircleAvatar(
-      //
-      //     backgroundImage: AssetImage("assets/appbar_leading.png"),
-      //   ),
-      //   ),
 
       body: SafeArea(
         child: Container(
@@ -45,26 +38,27 @@ class MenuHomeClass extends StatelessWidget {
               //gmail address text widget=============
               Container(
                   padding: EdgeInsets.only(bottom: 10),
-                  child: Text("halei.goebel@gmail.com",style: TextStyle(color: Colors.white),)),
+                  child: Text("halei.goebel@gmail.com",
+                    style: TextStyle(color: Colors.white54),
+                  ),
+              ),
 
-
+          SizedBox(height: 30.0),
               // payment wallet listView==========================
-              Expanded(
-                child: Container(
-                  height: 100,
-                  // MediaQuery.of(context).size.height,
-                  child: ListViewClass.PaymentListFun(),
-                ),
+              Container(
+                // MediaQuery.of(context).size.height,
+                child: ListViewClass.PaymentListFun(),
               ),
 
 
               // logout widget====================
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 child: InkWell(
                   child:  Text("LogOut",
-                    style: TextStyle(color: Colors.white),),
+                    style: TextStyle(color: Colors.white,fontSize: 17),),
                   onTap: (){
-                    Get.to(LastUpdatePage());
+                    Get.to(LastUpdateBalancePage());
                   },
                 ),
 

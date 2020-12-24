@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/views/get_started_page.dart';
-import 'package:flutter_projects/views/home_last_update.dart';
+import 'package:flutter_projects/views/get_started_signing_page.dart';
+import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
 import 'package:flutter_projects/views/onboarding_page.dart';
@@ -20,10 +20,19 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: OnboadingHomeClass(),
-      // home: GetStartedHomeClass(),
+
+      //page no-1===============
+      // home: OnboadingHomeClass(),
+
+      // page no-2=============
+
+      // home: SignUpHomeClass(),
+
+      //page no-08 page name :menu=========================
       //  home: MenuHomeClass(),
-      // home: LastUpdatePage(),
+
+      //name :last update balanceed page. page no-11
+      home: LastUpdateBalancePage(),
       // home: LoninPageClass(),
       // home: ProfileHomePageClass(),
     );

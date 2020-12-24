@@ -6,7 +6,7 @@ class ListViewClass {
   static Widget PaymentListFun() {
     return Expanded(
       child: ListView.builder(
-          scrollDirection: Axis.horizontal,
+          scrollDirection: Axis.vertical,
           shrinkWrap: true,
           physics: BouncingScrollPhysics(),
           itemCount: ListBuilderListClass.paymentList.length,
@@ -88,30 +88,28 @@ class ListViewClass {
     return ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         itemCount: ListBuilderListClass.homeLastUpdateList.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListTile(
-              leading: Container(
-                child: CircleAvatar(
-                  radius: 25,
-                  backgroundColor: Colors.white,
-                  child: Image.asset(ListBuilderListClass
-                      .recentTransactionList[index].assetImgPath),
-                ),
+          return ListTile(
+            leading: Container(
+              child: CircleAvatar(
+                radius: 25,
+                backgroundColor: Colors.white,
+                child: Image.asset(ListBuilderListClass
+                    .recentTransactionList[index].assetImgPath),
               ),
-              title: Text(
-                ListBuilderListClass.recentTransactionList[index].name,
-                style: TextStyle(fontSize: 14),
-              ),
-              subtitle: Text(
-                ListBuilderListClass.recentTransactionList[index].details,
-                style: TextStyle(fontSize: 13),
-              ),
-              trailing: Text(
-                  ListBuilderListClass.recentTransactionList[index].values),
             ),
+            title: Text(
+              ListBuilderListClass.recentTransactionList[index].name,
+              style: TextStyle(fontSize: 14),
+            ),
+            subtitle: Text(
+              ListBuilderListClass.recentTransactionList[index].details,
+              style: TextStyle(fontSize: 13),
+            ),
+            trailing: Text(
+                ListBuilderListClass.recentTransactionList[index].values),
           );
         });
   }
