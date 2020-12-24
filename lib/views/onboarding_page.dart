@@ -28,53 +28,69 @@ class OnboadingHomeClass extends StatelessWidget {
 
                       //Title widget=================================
                       Container(
-                        height: 150,
+                        height: 200,
                         alignment: Alignment.topLeft,
                         margin: EdgeInsets.only(left: 24),
                         child: ListTile(
-                          title: Text(
-                            "Pay Manage Grow...",
-                            style: TextStyle(
-                              fontSize: 56,
-                              color: Color(0xffFFFFFF),
-                              fontWeight: FontWeight.bold,
+                          title: Container(
+                            width: 50,
+                            child: Text(
+                              "Pay\nManage\nGrow...",
+                              style: TextStyle(
+                                fontSize: 50,
+                                color: Color(0xffFFFFFF),
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                          subtitle: ,
+                          subtitle: Column(
+                            children: [
+
+                              Text(
+                                "An easy app to manage your all payment and finance related needs",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Color(0xffFFFFFF),
+                                ),
+                              ),
+
+                              SizedBox(height: 20,),
+                              //click button to go to next page
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 100),
+                                height: 50,
+
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                                child: InkWell(
+                                  child: Text(
+                                    "Get Started",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30,
+                                        color: Colors.black),
+                                  ),
+                                  onTap: () {
+                                    Get.to(GetStartedHomeClass());
+                                  },
+                                ),
+                              ),
+
+                            ],
+                          ),
                         ),
                       ),
 
                       //subTitle text widget==================
-                      Container(
-                        child:
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      // SizedBox(
+                      //   height: 40,
+                      // ),
 
                       //Get started button widget=============
-                      Container(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 100),
-                        height: 50,
 
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(26),
-                        ),
-                        child: InkWell(
-                          child: Text(
-                            "Get Started",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                                color: Colors.black),
-                          ),
-                          onTap: () {
-                            Get.to(GetStartedHomeClass());
-                          },
-                        ),
-                      ),
                     ],
                   ),
                 ],
