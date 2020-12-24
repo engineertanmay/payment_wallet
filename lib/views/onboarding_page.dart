@@ -20,66 +20,62 @@ class OnboadingHomeClass extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 350,
-                        ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 350,
+                      ),
 
-                        //Title widget=================================
-                        Container(
-                          // margin: EdgeInsets.only(top: 350,),
-                          padding: EdgeInsets.only(left: 24),
-                          child: Text(
-                            "Pay\nManage \nGrow...\n",
+                      //Title widget=================================
+                      Container(
+                        height: 150,
+                        alignment: Alignment.topLeft,
+                        margin: EdgeInsets.only(left: 24),
+                        child: ListTile(
+                          title: Text(
+                            "Pay Manage Grow...",
                             style: TextStyle(
                               fontSize: 56,
                               color: Color(0xffFFFFFF),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          subtitle: ,
                         ),
+                      ),
 
-                        //subTitle text widget==================
-                        Container(
+                      //subTitle text widget==================
+                      Container(
+                        child:
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+
+                      //Get started button widget=============
+                      Container(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 100),
+                        height: 50,
+
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(26),
+                        ),
+                        child: InkWell(
                           child: Text(
-                            "An easy app to manage your all payment and finance related needs",
+                            "Get Started",
                             style: TextStyle(
-                              fontSize: 14,
-                              color: Color(0xffFFFFFF),
-                            ),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Colors.black),
                           ),
+                          onTap: () {
+                            Get.to(GetStartedHomeClass());
+                          },
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-
-                        //Get started button widget=============
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 100),
-                          height: 50,
-
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(26),
-                          ),
-                          child: InkWell(
-                            child: Text(
-                              "Get Started",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 30,
-                                  color: Colors.black),
-                            ),
-                            onTap: () {
-                              Get.to(GetStartedHomeClass());
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),

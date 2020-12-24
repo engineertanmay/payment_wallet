@@ -31,4 +31,15 @@ class PaymentConstClass {
       @required this.name,
       @required this.details,
       @required this.iconData});
+
+
+  //page no-9 horizontal card listview============
+
+  PaymentConstClass.ProfileCardListProperty(
+      { @required this.name,
+        @required this.details});
+  //page-9 profile page list view property============================
+  PaymentConstClass.ProfileListProperty(
+      { @required this.name,
+        @required this.iconData});
 }

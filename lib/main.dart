@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // home: OnboadingHomeClass(),
+      home: OnboadingHomeClass(),
       // home: GetStartedHomeClass(),
       //  home: MenuHomeClass(),
       // home: LastUpdatePage(),
       // home: LoninPageClass(),
-      home: ProfileHomePageClass(),
+      // home: ProfileHomePageClass(),
     );
   }
 }
