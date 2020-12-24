@@ -6,28 +6,33 @@ class ListViewClass{
   
   //payment wallet list view widget======================================
   static Widget PaymentListFun(){
-    return ListView.builder(
-      itemCount: ListBuilderListClass.paymentList.length,
-        itemBuilder: (context,index){
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              Container(
-                padding: EdgeInsets.only(right: 20),
-                child: Icon(
-                  ListBuilderListClass.paymentList[index].icon,
-                  color: Colors.white,
+    return Expanded(
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
+        itemCount: ListBuilderListClass.paymentList.length,
+          itemBuilder: (context,index){
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(right: 20),
+                  child: Icon(
+                    ListBuilderListClass.paymentList[index].icon,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              Container(
-                child: Text(ListBuilderListClass.paymentList[index].name,
-                  style: TextStyle(color: Colors.white),),
-              ),
-            ],
-          ),
-        );
-        }
+                Container(
+                  child: Text(ListBuilderListClass.paymentList[index].name,
+                    style: TextStyle(color: Colors.white),),
+                ),
+              ],
+            ),
+          );
+          }
+      ),
     );
   }
   
@@ -42,23 +47,33 @@ class ListViewClass{
         shrinkWrap: true,
         itemCount: ListBuilderListClass.homeLastUpdateList.length,
         itemBuilder: (context,index){
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
+          return Container(
+            height: 120,
+            width: 120,
+            margin: EdgeInsets.only(left:20.0),
+            decoration: BoxDecoration(
+              color: Color(0xffEEF7FB),
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   padding: EdgeInsets.only(right: 20),
                   child: CircleAvatar(
-                    backgroundImage: AssetImage(
-                      ListBuilderListClass.homeLastUpdateList[index].assetImgPath,
-                    ),
+                    child: Image.asset(ListBuilderListClass.homeLastUpdateList[index].assetImgPath),
+                    radius: 18,
+                    backgroundColor: Colors.white,
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(left: 22),
                   child: Row(
+                     // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(ListBuilderListClass.homeLastUpdateList[index].iconData),
-                      Text(ListBuilderListClass.homeLastUpdateList[index].values),
+                      Text(ListBuilderListClass.homeLastUpdateList[index].values,style: TextStyle(fontSize: 11),),
                     ],
                   ),
                 ),
@@ -83,11 +98,13 @@ class ListViewClass{
             child: ListTile(
             leading: Container(
               child: CircleAvatar(
-                backgroundImage: AssetImage(ListBuilderListClass.recentTransactionList[index].assetImgPath),
+                radius: 25,
+                backgroundColor: Colors.white,
+                child: Image.asset(ListBuilderListClass.recentTransactionList[index].assetImgPath),
               ),
             ),
-              title:Text(ListBuilderListClass.recentTransactionList[index].name),
-              subtitle:Text(ListBuilderListClass.recentTransactionList[index].details),
+              title:Text(ListBuilderListClass.recentTransactionList[index].name,style: TextStyle(fontSize: 14),),
+              subtitle:Text(ListBuilderListClass.recentTransactionList[index].details,style: TextStyle(fontSize: 13),),
               trailing: Text(ListBuilderListClass.recentTransactionList[index].values),
 
 

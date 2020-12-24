@@ -64,7 +64,7 @@ class MenuHomeClass extends StatelessWidget {
                   child:  Text("LogOut",
                     style: TextStyle(color: Colors.white),),
                   onTap: (){
-                    Get.to(HomeLastUpdateClass());
+                    Get.to(LastUpdatePage());
                   },
                 ),
 

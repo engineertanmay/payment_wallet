@@ -21,6 +21,14 @@ class PaymentConstClass {
   //recent transaction======================
   PaymentConstClass.RecentTransation(
       {@required this.assetImgPath,
-        @required this.name,
-        @required this.details,@required this.values});
+      @required this.name,
+      @required this.details,
+      @required this.values});
+
+  //bank account listview property==================
+  PaymentConstClass.BankAccountProperty(
+      {@required this.assetImgPath,
+      @required this.name,
+      @required this.details,
+      @required this.iconData});
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/core/constractor_class.dart';
+import 'package:flutter_projects/core/list_view_property.dart';
 
 class ListBuilderListClass {
   //payment wallet listview property===========================
@@ -31,17 +31,17 @@ class ListBuilderListClass {
 
   static PaymentConstClass lastUpdateHomeConst2 =
       PaymentConstClass.LastUpdateHomeConst(
-          assetImgPath: "assets/1.png",
+          assetImgPath: "assets/2.png",
           iconData: Icons.attach_money,
           values: "453");
   static PaymentConstClass lastUpdateHomeConst3 =
       PaymentConstClass.LastUpdateHomeConst(
-          assetImgPath: "assets/1.png",
+          assetImgPath: "assets/3.png",
           iconData: Icons.attach_money,
           values: "5455");
   static PaymentConstClass lastUpdateHomeConst4 =
       PaymentConstClass.LastUpdateHomeConst(
-          assetImgPath: "assets/1.png",
+          assetImgPath: "assets/4.png",
           iconData: Icons.attach_money,
           values: "44545");
 
@@ -58,26 +58,59 @@ class ListBuilderListClass {
   // this is recent transaction listview===================
   static PaymentConstClass recentTransaction1 =
   PaymentConstClass.RecentTransation(
-      assetImgPath: "assets/1.png",
+      assetImgPath: "assets/iconfinder_amazon.png",
       name: "Amazon Pantry",
       details: "Subscription payment",
-      values: "453");
+      values: "-1,200");
   static PaymentConstClass recentTransaction2 =
   PaymentConstClass.RecentTransation(
-      assetImgPath: "assets/1.png",
-      name: "Amazon Pantry",
-      details: "Subscription payment",
-      values: "453");
+      assetImgPath: "assets/risha.png",
+      name: "Risha Midyett",
+      details: "gift for Christmas",
+      values: "+6,950");
   static PaymentConstClass recentTransaction3 =
   PaymentConstClass.RecentTransation(
-      assetImgPath: "assets/1.png",
-      name: "Amazon Pantry",
-      details: "Subscription payment",
-      values: "453");
+      assetImgPath: "assets/iconfinder_paytm.png",
+      name: "PayTM auto pay",
+      details: "Weekly transaction through",
+      values: "-1200");
 
   static List<PaymentConstClass> recentTransactionList = [
     recentTransaction1,
     recentTransaction2,
     recentTransaction3,
   ];
+
+
+
+
+
+
+  //bank account list property======================
+  static PaymentConstClass bankAccountObj1 =
+  PaymentConstClass.BankAccountProperty(
+      assetImgPath: "assets/1.png",
+      name: "HDFC Bank",
+      details: "....123",
+      iconData: Icons.add);
+  static PaymentConstClass bankAccountObj2 =
+  PaymentConstClass.BankAccountProperty(
+      assetImgPath: "assets/2.png",
+      name: "Axis Bank",
+      details: "....123",
+      iconData: Icons.add);
+  static PaymentConstClass bankAccountObj3 =
+  PaymentConstClass.BankAccountProperty(
+      assetImgPath: "assets/3.png",
+      name: "Canara Bank",
+      details: "...125",
+      iconData: Icons.add);
+  static PaymentConstClass bankAccountObj4 =
+  PaymentConstClass.BankAccountProperty(
+      assetImgPath: "assets/4.png",
+      name: "Deutsche Bank",
+      details: "...156",
+      iconData: Icons.add);
+
+  static List<PaymentConstClass> bankAccounWidgetlist = [bankAccountObj1,bankAccountObj2,bankAccountObj3,bankAccountObj4];
 }
