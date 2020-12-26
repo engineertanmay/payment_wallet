@@ -48,4 +48,15 @@ class PaymentConstClass {
   PaymentConstClass.HelpCatagoryProperty(
       { @required this.name,
         @required this.iconData,@required this.icon});
+
+
+
+  //send money page no- 12====================
+  PaymentConstClass.SendMoneyProperty(
+      { @required this.assetImgPath,
+        @required this.name});
 }
+
+
+
+//

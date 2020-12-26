@@ -294,4 +294,71 @@ class ListViewClass {
           }),
     );
   }
+
+
+
+
+
+  //page no-12, send money home page horizontal list view================
+  static Widget sendMoneyItemFun() {
+    return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        itemCount: ListBuilderListClass.sendMoneyList.length,
+        itemBuilder: (context, index) {
+          {
+            if (index==0) {
+              return Container(
+                margin: EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    Container(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.green,
+                            radius: 26,
+                            child: Icon(Icons.add),
+                        ),
+                    ),
+
+                    Container(child: Text(ListBuilderListClass.sendMoneyList[index].name)),
+                  ],
+                ),
+                // child: ListTile(
+                //   title: CircleAvatar(
+                //     child: Image.asset(
+                //       ListBuilderListClass.sendMoneyItem[index].assetImgPath,
+                //     ),
+                //   ),
+                // ),
+              );
+            }
+            else{
+              return Container(
+                margin: EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    Container(
+                        child: CircleAvatar(
+                            radius: 26,
+                            child: Image.asset(ListBuilderListClass.sendMoneyList[index].assetImgPath))),
+
+                    Container(child: Text(ListBuilderListClass.sendMoneyList[index].name)),
+                  ],
+                ),
+                // child: ListTile(
+                //   title: CircleAvatar(
+                //     child: Image.asset(
+                //       ListBuilderListClass.sendMoneyItem[index].assetImgPath,
+                //     ),
+                //   ),
+                // ),
+              );
+            }
+
+
+          }
+        }
+        );
+  }
+
 }

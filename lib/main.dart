@@ -4,8 +4,10 @@ import 'package:flutter_projects/views/help_home_page.dart';
 import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
+import 'package:flutter_projects/views/new_payment_homepage.dart';
 import 'package:flutter_projects/views/onboarding_page.dart';
 import 'package:flutter_projects/views/profile_homepage.dart';
+import 'package:flutter_projects/views/send_money_home.dart';
 import 'package:get/get.dart';
 
 import 'views/bank_account_page.dart';
@@ -38,7 +40,16 @@ class MyApp extends StatelessWidget {
       // home: ProfileHomePageClass(),
 
       // page no-10; page name: help========================
-      home: HelpPageClass(),
+      // home: HelpPageClass(),
+
+      //send money hame Page class===============================
+      // home: SentMoneyHomeClass(),
+
+      //new payment homepage==============
+      home: NewPaymentHomeClass(),
+
+
+
     );
   }
 }
