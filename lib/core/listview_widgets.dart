@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/list_builder_list.dart';
+import 'package:flutter_projects/views/send_money_home.dart';
+import 'package:get/get.dart';
 
 class ListViewClass {
   //payment wallet list view widget======================================
@@ -108,8 +110,8 @@ class ListViewClass {
               ListBuilderListClass.recentTransactionList[index].details,
               style: TextStyle(fontSize: 13),
             ),
-            trailing: Text(
-                ListBuilderListClass.recentTransactionList[index].values),
+            trailing:
+                Text(ListBuilderListClass.recentTransactionList[index].values),
           );
         });
   }
@@ -240,6 +242,51 @@ class ListViewClass {
                   child: Icon(
                     ListBuilderListClass.profileItemList[index].iconData,
                     color: Colors.indigo,
+                  ),
+                ),
+              );
+            }
+          }),
+    );
+  }
+
+  //help catagory list item function=====================
+  static Widget HelpCatagorylItemFun() {
+    return Container(
+      height: 350,
+      width: 500,
+      margin: EdgeInsets.only(
+        top: 20,
+      ),
+      child: ListView.builder(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          physics: BouncingScrollPhysics(),
+          itemCount: ListBuilderListClass.helpCatagoryList.length,
+          itemBuilder: (context, index) {
+            {
+              return InkWell(
+                onTap: (){
+                  Get.to(SentMoneyHomeClass());
+                },
+                child: ListTile(
+                  leading: Container(
+                    child: Icon(
+                      ListBuilderListClass.helpCatagoryList[index].icon,
+                      color: Colors.red,
+                    ),
+                  ),
+                  title: Container(
+                    child: Text(
+                      ListBuilderListClass.helpCatagoryList[index].name,
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  trailing: Container(
+                    child: Icon(
+                      ListBuilderListClass.profileItemList[index].iconData,
+                      color: Colors.indigo,
+                    ),
                   ),
                 ),
               );

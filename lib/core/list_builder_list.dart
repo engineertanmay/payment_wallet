@@ -160,4 +160,38 @@ static List<PaymentConstClass> profileCardList = [profileCardListOb1,profileCard
     profileItemListObj7,
     profileItemListObj8,
   ];
+
+
+
+
+  //page no-10; page name:help, help catagory list item========
+  //profile page no-9 list property object=================
+  static PaymentConstClass helpCatagoryObj1 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Refferal & Bonus", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj2=PaymentConstClass.HelpCatagoryProperty(
+      name: "Payment", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj3 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Refund", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj4 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Statement & due account", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj5 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Rewards", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj6 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Card Managememt", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj7 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Cashback", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+  static PaymentConstClass helpCatagoryObj8 =PaymentConstClass.HelpCatagoryProperty(
+      name: "Need more help?", iconData: Icons.arrow_forward,icon:Icons.add_circle);
+
+
+  static List<PaymentConstClass> helpCatagoryList = [
+    helpCatagoryObj1,
+    helpCatagoryObj2,
+    helpCatagoryObj3,
+  helpCatagoryObj4,
+    helpCatagoryObj5,
+    helpCatagoryObj6,
+    helpCatagoryObj7,helpCatagoryObj8
+  ];
+
 }

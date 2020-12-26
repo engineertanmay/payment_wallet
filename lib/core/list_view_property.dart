@@ -42,4 +42,10 @@ class PaymentConstClass {
   PaymentConstClass.ProfileListProperty(
       { @required this.name,
         @required this.iconData});
+
+
+  //page no-9, help catagory property obj=================
+  PaymentConstClass.HelpCatagoryProperty(
+      { @required this.name,
+        @required this.iconData,@required this.icon});
 }

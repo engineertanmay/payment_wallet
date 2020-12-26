@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/views/get_started_signing_page.dart';
+import 'package:flutter_projects/views/help_home_page.dart';
 import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
@@ -32,9 +33,12 @@ class MyApp extends StatelessWidget {
       //  home: MenuHomeClass(),
 
       //name :last update balanceed page. page no-11
-      home: LastUpdateBalancePage(),
+      // home: LastUpdateBalancePage(),
       // home: LoninPageClass(),
       // home: ProfileHomePageClass(),
+
+      // page no-10; page name: help========================
+      home: HelpPageClass(),
     );
   }
 }
