@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/views/get_started_signing_page.dart';
 import 'package:flutter_projects/views/help_home_page.dart';
+import 'package:flutter_projects/views/history_homepage.dart';
 import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
 import 'package:flutter_projects/views/new_payment_homepage.dart';
 import 'package:flutter_projects/views/onboarding_page.dart';
 import 'package:flutter_projects/views/profile_homepage.dart';
+import 'package:flutter_projects/views/scan_and_pay_homepage.dart';
 import 'package:flutter_projects/views/send_money_home.dart';
 import 'package:get/get.dart';
 
@@ -55,7 +57,13 @@ class MyApp extends StatelessWidget {
       // home: SentMoneyHomeClass(),
 
       //page no-13,page name:new payment homepage==============
-      home: NewPaymentHomeClass(),
+      // home: NewPaymentHomeClass(),
+
+      //page name: scan and pay, page no-14
+      // home: ScanAndPayClass(),
+
+      //page name:History,page no-15
+      home: History(),
 
     );
   }
