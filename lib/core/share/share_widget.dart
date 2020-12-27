@@ -35,7 +35,7 @@ static Widget HistoryHeadingFun(String title){
             child: Text(ListBuilderListClass.recentTransactionList[index].details),
           ),
           trailing: Container(
-            child: Text(ListBuilderListClass.recentTransactionList[index].values,style: TextStyle(color: Colors.red),),
+            child: Text(ListBuilderListClass.recentTransactionList[index].values,style: TextStyle(color: Colors.black),),
           ),
         );
       },
@@ -85,7 +85,7 @@ static Widget HistoryHeadingFun(String title){
             child: Text(ListBuilderListClass.recentTransactionList[index].details),
           ),
           trailing: Container(
-            child: Text(ListBuilderListClass.recentTransactionList[index].values,style: TextStyle(color: Colors.red),),
+            child: Text(ListBuilderListClass.recentTransactionList[index].values,style: TextStyle(color: Colors.black),),
           ),
         );
       },

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/views/card_page.dart';
 import 'package:flutter_projects/views/get_started_signing_page.dart';
 import 'package:flutter_projects/views/help_home_page.dart';
 import 'package:flutter_projects/views/history_homepage.dart';
+import 'package:flutter_projects/views/last_history_page.dart';
 import 'package:flutter_projects/views/last_update_balance_page.dart';
 import 'package:flutter_projects/views/login_with_pin_page.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
@@ -63,7 +65,14 @@ class MyApp extends StatelessWidget {
       // home: ScanAndPayClass(),
 
       //page name:History,page no-15
-      home: History(),
+      // home: History(),
+
+      //page name:History,page no-16
+      // home: LastHistory(),
+
+      //page name:Card,page no-17
+      home: CardPage(),
+
 
     );
   }
