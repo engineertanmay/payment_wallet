@@ -28,27 +28,34 @@ class MyApp extends StatelessWidget {
       // home: OnboadingHomeClass(),
 
       // page no-2=============
-
       // home: SignUpHomeClass(),
+
+      //page no-2 and page no-3 are same====================
+
+      //page no-5, page name:add bank account====================
+      // home:BankAccountPageClass(),
+
+
+      //page no-6, page name: login to pin
+      // home: LoninPageClass(),
 
       //page no-08 page name :menu=========================
       //  home: MenuHomeClass(),
 
-      //name :last update balanceed page. page no-11
-      // home: LastUpdateBalancePage(),
-      // home: LoninPageClass(),
+      //page no-9, page name:profile,=====================
       // home: ProfileHomePageClass(),
 
       // page no-10; page name: help========================
       // home: HelpPageClass(),
 
-      //send money hame Page class===============================
+      //page no-11, Page name :last update balanceed page.
+      // home: LastUpdateBalancePage(),
+
+      //page no-12,page name:send money, hame Page class===============================
       // home: SentMoneyHomeClass(),
 
-      //new payment homepage==============
+      //page no-13,page name:new payment homepage==============
       home: NewPaymentHomeClass(),
-
-
 
     );
   }

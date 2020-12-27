@@ -12,6 +12,7 @@ class SentMoneyHomeClass extends StatelessWidget {
         child: Container(
           child: Column(
             children: [
+              SizedBox(height: 30,),
               //send money text widget=================================
               Container(
                 alignment: Alignment.topLeft,

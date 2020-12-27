@@ -237,7 +237,83 @@ class ListBuilderListClass {
     sendMoneyObj5
   ];
 
+  //new payment==================================
+//send money property object=====================
+  static PaymentConstClass newPaymentProfileObj1 =
+      PaymentConstClass.NewPaymentProfileProperty(
+          assetImgPath: "assets/payment_img1.PNG", name: "New");
+  static PaymentConstClass newPaymentProfileObj2 =
+      PaymentConstClass.NewPaymentProfileProperty(
+          assetImgPath: "assets/payment_img2.PNG", name: "Cori Harve");
+  static PaymentConstClass newPaymentProfileObj3 =
+      PaymentConstClass.NewPaymentProfileProperty(
+          assetImgPath: "assets/payment_img3.PNG", name: "Milly Oqu");
+  static PaymentConstClass newPaymentProfileObj4 =
+      PaymentConstClass.NewPaymentProfileProperty(
+          assetImgPath: "assets/payment_img4.PNG", name: "Risha Midy");
+  static PaymentConstClass newPaymentProfileObj5 =
+      PaymentConstClass.NewPaymentProfileProperty(
+          assetImgPath: "assets/payment_img5.PNG", name: "Miss Schu");
 
+  static List<PaymentConstClass> newPaymentProfileList = [
+    newPaymentProfileObj1,
+    newPaymentProfileObj2,
+    newPaymentProfileObj3,
+    newPaymentProfileObj4,
+    newPaymentProfileObj5,
+  ];
 
-  //new payment=======
+  // page no-13, page name:new payment,details: payment contact==============
+
+  static PaymentConstClass paymentConstObj1 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact1.PNG",
+          title: "Shizue Finerty",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj2 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact2.PNG",
+          title: "Corrin Benson",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj3 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact3.PNG",
+          title: "Lashunda Bolugna",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj4 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact4.PNG",
+          title: "Patty Granderson",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj5 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact5.PNG",
+          title: "Miss Schulman",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj6 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact6.PNG",
+          title: "Latia smallwood",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj7 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact7.PNG",
+          title: "Guillarmo Klutts",
+          details: "12345678");
+  static PaymentConstClass paymentConstObj8 =
+      PaymentConstClass.PaymentContactProperty(
+          assetImgPath: "assets/payment_contact8.PNG",
+          title: "Marquerite Burk",
+          details: "12345678");
+
+  static List<PaymentConstClass> paymentContactList = [
+    paymentConstObj1,
+    paymentConstObj2,
+    paymentConstObj3,
+    paymentConstObj4,
+    paymentConstObj5,
+    paymentConstObj6,
+    paymentConstObj7,
+    paymentConstObj8,
+  ];
 }

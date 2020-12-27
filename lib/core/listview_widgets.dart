@@ -361,4 +361,79 @@ class ListViewClass {
         );
   }
 
+
+
+
+
+
+
+  //page no-13, send money home page horizontal list view================
+  static Widget newPaymentProfileItemFun() {
+    return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        itemCount: ListBuilderListClass.newPaymentProfileList.length,
+        itemBuilder: (context, index) {
+          {
+              return Container(
+                margin: EdgeInsets.only(right: 10),
+                child: Column(
+                  children: [
+                    Container(
+                        child: CircleAvatar(
+                            radius: 26,
+                            backgroundImage: AssetImage(ListBuilderListClass.newPaymentProfileList[index].assetImgPath))),
+
+                    Container(child: Text(ListBuilderListClass.newPaymentProfileList[index].name)),
+                  ],
+                ),
+              );
+          }
+        }
+    );
+  }
+
+
+
+  //page no-13, name:new payment,details: payment contact vertical list======
+  static Widget paymentContactFun() {
+    return ListView.builder(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        itemCount: ListBuilderListClass.paymentContactList.length,
+        itemBuilder: (context, index) {
+          {
+              return Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(color: Colors.black12),
+                  ),
+                ),
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(
+                      ListBuilderListClass.paymentContactList[index].assetImgPath,
+                    ),
+                  ),
+
+                  title: Container(
+                    child: Text(ListBuilderListClass.paymentContactList[index].title),
+                  ),
+                  subtitle: Container(
+                    child: Text(ListBuilderListClass.paymentContactList[index].details),
+                  ),
+                ),
+              );
+
+
+
+          }
+        }
+    );
+  }
+
+
+
+
+
 }
