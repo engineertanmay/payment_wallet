@@ -14,6 +14,7 @@ class ScanAndPayClass extends StatelessWidget {
 
           child: Column(
             children: [
+              SizedBox(height: 20,),
               Container(
                 margin: EdgeInsets.only(left: 20),
                 alignment: Alignment.topLeft,
@@ -27,15 +28,11 @@ class ScanAndPayClass extends StatelessWidget {
                 child: Center(
                   child: Container(
                     margin: EdgeInsets.only(top: 150),
-                    height: 200,
-                    width: 200,
+                    // height: 200,
+                    // width: 200,
                     child: CircleAvatar(
-                      backgroundColor:Color(0xff4d4d4d),
-                      child: SpinKitRing(
-                        color: Colors.white,
-                        size: 200.0,
-
-                      ),
+                      radius: 160,
+                      backgroundImage:AssetImage("assets/scan.PNG"),
                     ),
                   ),
                 ),
