@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/views/add_new_card.dart';
 import 'package:flutter_projects/views/card_page.dart';
 import 'package:flutter_projects/views/get_started_signing_page.dart';
 import 'package:flutter_projects/views/help_home_page.dart';
@@ -71,7 +72,13 @@ class MyApp extends StatelessWidget {
       // home: LastHistory(),
 
       //page name:Card,page no-17
-      home: CardPage(),
+      // home: CardPage(),
+
+
+        //page name:Card,page no-18
+        home: NewCardPage(),
+
+
 
 
     );

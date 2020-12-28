@@ -3,8 +3,7 @@ import 'package:flutter_projects/core/card_widget.dart';
 import 'package:flutter_projects/core/share/share_widget.dart';
 import 'package:flutter_projects/views/add_new_card.dart';
 import 'package:get/get.dart';
-import 'package:percent_indicator/percent_indicator.dart';
-class CardPage extends StatelessWidget {
+class ReportExpensespage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +28,19 @@ class CardPage extends StatelessWidget {
                   // child:,
                 ),
                 SizedBox(height: 20,),
-          Container(
-            child: Text("Last Statement Outstanding",style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.bold,
-                color: Colors.black),),
-          ),
+                Container(
+                  child: Text("Last Statement Outstanding",style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),),
+                ),
 
                 SizedBox(height: 10,),
                 Container(
                   child: Text("\u{20B9}854665",style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,),),
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,),),
                 ),
 
                 SizedBox(height: 10,),
