@@ -8,8 +8,8 @@ class ShareWidgetClass{
 // page no-15, page name:history; list heading====================
 static Widget HistoryHeadingFun(String title){
   return Container(
-    padding: EdgeInsets.only(left: 20),
-    alignment: Alignment.topLeft,
+    padding: EdgeInsets.all(10.0),
+    alignment: Alignment.centerLeft,
     child: Text("$title",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
   );
 }

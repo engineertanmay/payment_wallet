@@ -29,7 +29,7 @@ class OnboadingHomeClass extends StatelessWidget {
                       //Title widget=================================
                       InkWell(
                         onTap: (){
-                          Get.to(SignUpHomeClass());
+                          Get.to(GetStartAndSignUp());
                         },
                         child: Container(
                           height: 200,
@@ -47,48 +47,56 @@ class OnboadingHomeClass extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            subtitle: Column(
-                              children: [
+                            subtitle: InkWell(
+                              onTap: (){
+                                Get.to(GetStartAndSignUp());
+                              },
+                              child: Container(
+                                child: Column(
+                                  children: [
 
-                                Text(
-                                  "An easy app to manage your all payment and finance related needs",
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Color(0xffFFFFFF),
-                                  ),
-                                ),
-
-                                SizedBox(height: 20,),
-                                //click button to go to next page
-                                Container(
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 10, horizontal: 100),
-                                  height: 50,
-
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(26),
-                                  ),
-                                  child: InkWell(
-                                    onTap: (){
-                                      Get.to(SignUpHomeClass());
-                                    },
-                                    child: Text(
-                                      "Get Started",
+                                    Text(
+                                      "An easy app to manage your all payment and finance related needs",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 30,
-                                          color: Colors.black),
+                                        fontSize: 14,
+                                        color: Color(0xffFFFFFF),
+                                      ),
                                     ),
-                                  ),
-                                ),
 
-                              ],
+                                    SizedBox(height: 20,),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                         ),
                       ),
 
+
+
+                      //GET STARTED BUTTON FOR NEXT PAGE==============
+                      InkWell(
+                        onTap: (){
+                          Get.to(GetStartAndSignUp());
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 100),
+                          height: 50,
+
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(26),
+                          ),
+                          child: Text(
+                            "Get Started",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30,
+                                color: Colors.black),
+                          ),
+                        ),
+                      ),
 
                     ],
                   ),

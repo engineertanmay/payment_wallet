@@ -32,6 +32,8 @@ dependencies:
   flutter_svg:
   charts_flutter: ^0.8.1
   percent_indicator: "^2.1.7+2"
+  fl_chart: ^0.12.2
+  loading: ^1.0.2
 
 dev_dependencies:
   flutter_test:

@@ -4,7 +4,7 @@ import 'package:flutter_projects/core/share/share_const_property.dart';
 import 'package:flutter_projects/views/new_payment_homepage.dart';
 import 'package:get/get.dart';
 
-class SentMoneyHomeClass extends StatelessWidget {
+class SendMoneyClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +107,7 @@ class SentMoneyHomeClass extends StatelessWidget {
                         Container(
                           child: Text(
                             "+Add message",
-                            style: TextStyle(color: Colors.indigo),
+                            style: TextStyle(color: Colors.indigo,fontSize: 18),
                           ),
                         ),
 

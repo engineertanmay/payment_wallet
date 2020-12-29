@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/views/menu_home_page.dart';
+import 'package:flutter_projects/views/otp_varification_page.dart';
 import 'package:get/get.dart';
 
-class SignUpHomeClass extends StatelessWidget {
+class GetStartAndSignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,15 +86,18 @@ class SignUpHomeClass extends StatelessWidget {
 
 
                             //===========get started button tap to next page=====
-                            Container(
-                              margin: EdgeInsets.only(top: 20,bottom: 20),
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 100),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(26),
-                                color: Color(0xff1E32FA),
-                              ),
-                              child: InkWell(
+                            InkWell(
+                                onTap:(){
+                                  Get.to(OTPvarification());
+                                },
+                              child: Container(
+                                margin: EdgeInsets.only(top: 20,bottom: 20),
+                                padding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 100),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(26),
+                                  color: Color(0xff1E32FA),
+                                ),
                                 child: Text(
                                   "Get Started",
                                   style: TextStyle(
@@ -101,9 +105,6 @@ class SignUpHomeClass extends StatelessWidget {
                                       fontSize: 30,
                                       color: Colors.white),
                                 ),
-                                onTap: () {
-                                  Get.to(MenuHomeClass());
-                                },
                               ),
                             ),
 

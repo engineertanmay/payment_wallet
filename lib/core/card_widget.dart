@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/share/share_widget.dart';
+import 'package:flutter_projects/views/report_expenses_page.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 class CardWidgetClass{
+  static List<String> reportHeaderList = ["Day","Week","Month","3 Months"];
   //horizontal card listview====================================
   static Widget CardWidget(){
     return ListView.builder(
@@ -124,7 +126,7 @@ static Widget CardGridListWidget(){
                   child: Column(
                     children: [
                       SizedBox(height: 10,),
-                      Icon(Icons.shopping_bag),
+                      Icon(Icons.shopping_bag,color: Colors.red,),
                       Text("Shopping"),
                       Text("\u{20B9}1254"),
                       Container(
@@ -153,7 +155,7 @@ static Widget CardGridListWidget(){
                   child: Column(
                     children: [
                       SizedBox(height: 10,),
-                      Icon(Icons.food_bank),
+                      Icon(Icons.food_bank,color: Colors.red,),
                       Text("Shopping"),
                       Text("\u{20B9}1254"),
                       Container(
@@ -182,7 +184,7 @@ static Widget CardGridListWidget(){
                   child: Column(
                     children: [
                       SizedBox(height: 10,),
-                      Icon(Icons.airplanemode_active),
+                      Icon(Icons.airplanemode_active,color: Colors.red,),
                       Text("Shopping"),
                       Text("\u{20B9}1254"),
                       Container(
@@ -207,6 +209,38 @@ static Widget CardGridListWidget(){
         }
     );
 }
+
+
+
+
+
+//report expenses header menu list==========================================
+  static Widget ReportExpensesFun(){
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        itemCount: CardWidgetClass.reportHeaderList.length,
+        itemBuilder: (context,index){
+        if (index==2) {
+          return Container(
+            alignment: Alignment.center,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Color(0xffeef7fb),
+                borderRadius: BorderRadius.circular(26),
+              ),
+              child: Text(CardWidgetClass.reportHeaderList[index],style: TextStyle(fontWeight: FontWeight.bold),));
+        }
+          else{
+          return Container(
+            padding: EdgeInsets.all(10),
+            child: Text(CardWidgetClass.reportHeaderList[index]),
+            width: 80.0,
+          );
+        }
+        }
+    );
+  }
 
 
 

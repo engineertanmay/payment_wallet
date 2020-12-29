@@ -3,7 +3,6 @@ import 'package:flutter_projects/core/card_widget.dart';
 import 'package:flutter_projects/core/share/share_widget.dart';
 import 'package:flutter_projects/views/add_new_card.dart';
 import 'package:get/get.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 class CardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,17 +15,27 @@ class CardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  child: ShareWidgetClass.CardListTile("Cards", "+add New"),
+                InkWell(
+                  onTap: (){
+                    Get.to(AddCardPage());
+                  },
+                  child: Container(
+                    child: ShareWidgetClass.CardListTile("Cards", "+add New"),
+                  ),
                 ),
                 SizedBox(height: 10,),
 
 
                 //horizontal card design==========================
-                Container(
-                  height: 200,
-                  child: CardWidgetClass.CardWidget(),
-                  // child:,
+                InkWell(
+                  onTap: (){
+                    Get.to(AddCardPage());
+                  },
+                  child: Container(
+                    height: 200,
+                    child: CardWidgetClass.CardWidget(),
+                    // child:,
+                  ),
                 ),
                 SizedBox(height: 20,),
           Container(
@@ -72,7 +81,7 @@ class CardPage extends StatelessWidget {
                 SizedBox(height: 20,),
                 InkWell(
                   onTap: (){
-                    Get.to(NewCardPage());
+                    Get.to(AddCardPage());
                   },
                   child: Container(
                     height: 500,

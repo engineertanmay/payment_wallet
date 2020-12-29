@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'history_homepage.dart';
 
 class ScanAndPayClass extends StatelessWidget {

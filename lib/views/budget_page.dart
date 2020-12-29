@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/card_widget.dart';
-import 'package:flutter_projects/views/budget_page.dart';
+import 'package:flutter_projects/views/add_new_card.dart';
 import 'package:get/get.dart';
-class ReportExpensesPage extends StatelessWidget {
+class BudgetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,25 +14,42 @@ class ReportExpensesPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 50,),
+                SizedBox(height: 10,),
                 Container(
-                  child: Text("January",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                  child: Text("Budget",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+                ),
+                SizedBox(height: 10,),
+
+                Container(
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.red,
+                    radius: 85,
+                    child: CircleAvatar(
+                      radius: 80,
+                      backgroundColor: Colors.white,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Total Spend",style:TextStyle(color: Colors.black),),
+                          Text("\u{20B9} 8524",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
+                          Text("of \u{20B9} 95,4554",style:TextStyle(color: Colors.black),),
+                        ],
+                      ),
+
+                    ),
+                  ),
                 ),
                 SizedBox(height: 10,),
 
                 //horizontal card design==========================
-
-                  InkWell(
-                    onTap: (){
-                      Get.to(BudgetPage());
-                    },
-                  child: Container(
-                    height: 40,
-                    child: CardWidgetClass.ReportExpensesFun(),
-                    // child:,
-                  ),
+                Container(
+                  height: 40,
+                  child: CardWidgetClass.ReportExpensesFun(),
+                  // child:,
                 ),
-                SizedBox(height: 100,),
+                SizedBox(height: 10,),
                 Container(
                   child: Text("Last Statement Outstanding",style: TextStyle(
                       fontSize: 17,
@@ -76,7 +93,7 @@ class ReportExpensesPage extends StatelessWidget {
                 SizedBox(height: 20,),
                 InkWell(
                   onTap: (){
-                    Get.to(BudgetPage());
+                    Get.to(AddCardPage());
                   },
                   child: Container(
                     height: 500,

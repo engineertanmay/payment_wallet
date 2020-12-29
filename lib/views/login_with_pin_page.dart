@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/share/share_const_property.dart';
+import 'package:flutter_projects/views/login_with_fingerprint.dart';
 import 'package:flutter_projects/views/profile_homepage.dart';
 import 'package:get/get.dart';
-class LoninPageClass extends StatelessWidget {
+class LogInWithPin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +45,7 @@ class LoninPageClass extends StatelessWidget {
                 children: [
                   SizedBox(height: 20,),
                   Container(child: Text("Welcome to Back!",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),),
+                  SizedBox(height: 20,),
                   Container(child: Text("Login with pin",
                     style: TextStyle(fontWeight: FontWeight.bold,
                         fontSize: 13),),),
@@ -77,23 +79,22 @@ class LoninPageClass extends StatelessWidget {
                         ),
                   ),
 
-
+                  SizedBox(height: 20,),
                   //FINGURE PRINT WIDGET=======
-                  Container(
-                    alignment: Alignment.center,
-                    child: ListTile(
-                      title: InkWell(
-                         // inkwell color
-                        child: SizedBox(width: 80, height: 80,
-                            child: Icon(Icons.fingerprint,size: 50,color: Color(0xff1e32fa),)),
-                        onTap: () {
-                          Get.to(ProfileHomePageClass());
-                        },
-                      ),
-                      subtitle: Container(
-                        alignment: Alignment.center,
-                          child: Text("Login using Fingerprint",style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,),)),
+                    InkWell(
+                    onTap: (){
+                      Get.to(LogInWithFingerPrint());
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: ListTile(
+                        title: SizedBox(width: 100, height: 100,
+                            child: Icon(Icons.fingerprint,size: 80,color: Color(0xff1e32fa),)),
+                        subtitle: Container(
+                          alignment: Alignment.center,
+                            child: Text("Login using Fingerprint",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,),)),
 
+                      ),
                     ),
                   ),
                 ],

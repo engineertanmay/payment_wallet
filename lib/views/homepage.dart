@@ -1,9 +1,9 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/listview_widgets.dart';
-import 'package:flutter_projects/views/bank_account_page.dart';
+import 'package:flutter_projects/views/add_bank_account_page.dart';
+import 'package:flutter_projects/views/send_money_home.dart';
 import 'package:get/get.dart';
-class LastUpdateBalancePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class LastUpdateBalancePage extends StatelessWidget {
                 //hsbc logo widget with text widget===============
                 Container(
                     alignment: Alignment.centerLeft,
-                    child: Image.asset("assets/HSBC_logo.png",height: 20,width: 74,)),
+                    child: Image.asset("assets/HSBC_logo.png",height: 35,width: 74,)),
                 SizedBox(height: 10,),
                 Container(
                   child: ListTile(
@@ -25,7 +25,7 @@ class LastUpdateBalancePage extends StatelessWidget {
                     subtitle: Text("\u{20B9} 85,625",style: TextStyle(fontSize: 34,fontWeight: FontWeight.bold),),
                     trailing: InkWell(
                         onTap: (){
-                          Get.to(BankAccountPageClass());
+                          Get.to(SendMoneyClass());
                         },
                         child: CircleAvatar(child: Image.asset("assets/refresh.png"))),
                   ),
@@ -52,9 +52,14 @@ class LastUpdateBalancePage extends StatelessWidget {
 
 
                 //start horizontal List
-                Container(
-                  height: 100,
-                  child: ListViewClass.updateHomeFun(),
+                InkWell(
+                  onTap: (){
+                    Get.to(SendMoneyClass());
+                  },
+                  child: Container(
+                    height: 100,
+                    child: ListViewClass.updateHomeFun(),
+                  ),
                 ),
 
               SizedBox(height: 20,),
@@ -64,7 +69,7 @@ class LastUpdateBalancePage extends StatelessWidget {
                   children: [
                   InkWell(
                     onTap: (){
-                      Get.to(BankAccountPageClass());
+                      Get.to(SendMoneyClass());
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -80,7 +85,7 @@ class LastUpdateBalancePage extends StatelessWidget {
                   SizedBox(width: 20,),
                   InkWell(
                     onTap: (){
-                      Get.to(BankAccountPageClass());
+                      Get.to(SendMoneyClass());
                     },
                     child: Container(
                       height: 80,
@@ -114,29 +119,39 @@ class LastUpdateBalancePage extends StatelessWidget {
 
 
                 //Recent Transaction listview=====================
-                Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                    color: Color(0xffEEF7FB),
-                    borderRadius: BorderRadius.only(
-                      topLeft:Radius.circular(12),
-                      topRight: Radius.circular(12),),
+                InkWell(
+                  onTap: (){
+                    Get.to(SendMoneyClass());
+                  },
+                  child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: Color(0xffEEF7FB),
+                      borderRadius: BorderRadius.only(
+                        topLeft:Radius.circular(12),
+                        topRight: Radius.circular(12),),
+                    ),
+                    child: ListViewClass.RecentTransaction(),
                   ),
-                  child: ListViewClass.RecentTransaction(),
                 ),
 
 
 
                 //scanner QR code widget====================
-                Container(
-                  child: ListTile(
-                    title: CircleAvatar(
-                      radius: 36,
-                        child: Icon(Icons.qr_code_scanner_outlined,size: 35,),
+                InkWell(
+                  onTap: (){
+                    Get.to(SendMoneyClass());
+                  },
+                  child: Container(
+                    child: ListTile(
+                      title: CircleAvatar(
+                        radius: 36,
+                          child: Icon(Icons.qr_code_scanner_outlined,size: 35,),
+                      ),
+                      subtitle: Container(
+                          alignment: Alignment.center,
+                          child: Text("Scanner",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),)),
                     ),
-                    subtitle: Container(
-                        alignment: Alignment.center,
-                        child: Text("Scanner",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),)),
                   ),
                 ),
               ],

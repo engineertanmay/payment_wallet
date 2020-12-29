@@ -4,7 +4,7 @@ import 'package:flutter_projects/core/bottomsheet_modal_widget.dart';
 import 'package:flutter_projects/core/share/share_widget.dart';
 import 'package:flutter_projects/views/card_page.dart';
 import 'package:get/get.dart';
-class LastHistory extends StatelessWidget {
+class FilterHistoryClass extends StatelessWidget {
 
 
   //modal bottom sheet for last history============================
@@ -60,7 +60,7 @@ class LastHistory extends StatelessWidget {
               Expanded(
                 child:InkWell(
                   onTap: (){
-                    Get.to(LastHistory());
+                    Get.to(CardPage());
                   },
                   child: Container(
                     margin: EdgeInsets.symmetric(horizontal: 20),
@@ -69,13 +69,18 @@ class LastHistory extends StatelessWidget {
                         //listTile heading widget=======================
                         ShareWidgetClass.HistoryHeadingFun("November 12, Tuesday"),
                         //First listview widget=================================
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xffeef7fb),
-                            borderRadius: BorderRadius.circular(26),
+                        InkWell(
+                          onTap: (){
+                            Get.to(CardPage());
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xffeef7fb),
+                              borderRadius: BorderRadius.circular(26),
+                            ),
+                            height: 160,
+                            child: ShareWidgetClass.HistoryFirstListFun(),
                           ),
-                          height: 160,
-                          child: ShareWidgetClass.HistoryFirstListFun(),
                         ),
 
 
@@ -83,13 +88,18 @@ class LastHistory extends StatelessWidget {
                         //second list view heading====================
                         ShareWidgetClass.HistoryHeadingFun("November 15, Monday"),
                         //second listview widget=================================
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xffeef7fb),
-                            borderRadius: BorderRadius.circular(26),
+                        InkWell(
+                          onTap: (){
+                            Get.to(CardPage());
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xffeef7fb),
+                              borderRadius: BorderRadius.circular(26),
+                            ),
+                            height: 150,
+                            child: ShareWidgetClass.HistorySecondListFun(),
                           ),
-                          height: 150,
-                          child: ShareWidgetClass.HistorySecondListFun(),
                         ),
 
 
@@ -97,22 +107,24 @@ class LastHistory extends StatelessWidget {
                         //third list view heading====================
                         ShareWidgetClass.HistoryHeadingFun("November 20, Wednesday"),
                         //First listview widget=================================
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xffeef7fb),
-                            borderRadius: BorderRadius.circular(26),
+                        InkWell(
+                          onTap: (){
+                            Get.to(CardPage());
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Color(0xffeef7fb),
+                              borderRadius: BorderRadius.circular(26),
+                            ),
+                            height: 150,
+                            child: ShareWidgetClass.HistoryThirdListFun(),
                           ),
-                          height: 150,
-                          child: ShareWidgetClass.HistoryThirdListFun(),
                         ),
                       ],
                     ),
                   ),
                 ),
               ),
-
-
-
 
             ],
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/listview_widgets.dart';
 import 'package:flutter_projects/core/share/share_const_property.dart';
+import 'package:flutter_projects/views/homepage.dart';
+import 'package:get/get.dart';
 class HelpPageClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,8 +19,14 @@ class HelpPageClass extends StatelessWidget {
                   leading: Container(
                     child: Text("Help",style: TextStyle(
                       fontSize: 30,fontWeight: FontWeight.bold,),),),
-                  trailing: Container(
-                    child: Text("Ask Question",style: TextStyle(color: Colors.indigo,),),
+                  trailing: InkWell(
+                    onTap: (){
+                      Get.to(HomePage());
+                    },
+                    child: Container(
+                      child: Text("Ask Question",style: TextStyle(
+                        color: Colors.indigo,fontSize: 17),),
+                    ),
                   ),
 
                 ),

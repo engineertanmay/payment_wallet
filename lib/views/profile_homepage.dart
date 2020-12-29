@@ -1,12 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/core/list_builder_list.dart';
 import 'package:flutter_projects/core/listview_widgets.dart';
 import 'package:flutter_projects/core/share/share_const_property.dart';
+import 'package:flutter_projects/views/help_home_page.dart';
 import 'package:flutter_projects/views/new_payment_homepage.dart';
 import 'package:get/get.dart';
 
-class ProfileHomePageClass extends StatelessWidget {
+class ProfileHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +14,7 @@ class ProfileHomePageClass extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 20,
+              height: 50,
             ),
             //appbar profile widget================
             Container(
@@ -29,7 +28,7 @@ class ProfileHomePageClass extends StatelessWidget {
                 ),
                 trailing: InkWell(
                   onTap: (){
-                    Get.to(NewPaymentHomeClass());
+                    Get.to(HelpPageClass());
                   },
                   child: Text(
                     "Edit Profile",
@@ -83,10 +82,15 @@ class ProfileHomePageClass extends StatelessWidget {
 
           SizedBox(height: 20,),
             //horizontal card list view
-            Container(
-              margin: EdgeInsets.only(right: 20),
-              height: 80,
-              child: ListViewClass.CardListFun(),
+            InkWell(
+              onTap: (){
+                Get.to(HelpPageClass());
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 20),
+                height: 80,
+                child: ListViewClass.CardListFun(),
+              ),
             ),
 
 

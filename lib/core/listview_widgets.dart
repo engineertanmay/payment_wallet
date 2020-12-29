@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/core/list_builder_list.dart';
+import 'package:flutter_projects/views/help_home_page.dart';
+import 'package:flutter_projects/views/homepage.dart';
+import 'package:flutter_projects/views/scan_and_pay_homepage.dart';
 import 'package:flutter_projects/views/send_money_home.dart';
 import 'package:get/get.dart';
 
@@ -238,10 +241,15 @@ class ListViewClass {
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
-                trailing: Container(
-                  child: Icon(
-                    ListBuilderListClass.profileItemList[index].iconData,
-                    color: Colors.indigo,
+                trailing: InkWell(
+                    onTap: (){
+                      Get.to(HelpPageClass());
+                    },
+                  child: Container(
+                    child: Icon(
+                      ListBuilderListClass.profileItemList[index].iconData,
+                      color: Colors.indigo,
+                    ),
                   ),
                 ),
               );
@@ -267,7 +275,7 @@ class ListViewClass {
             {
               return InkWell(
                 onTap: (){
-                  Get.to(SentMoneyHomeClass());
+                  Get.to(HomePage());
                 },
                 child: ListTile(
                   leading: Container(
@@ -316,7 +324,7 @@ class ListViewClass {
                         child: CircleAvatar(
                           backgroundColor: Colors.green,
                             radius: 26,
-                            child: Icon(Icons.add),
+                            child: Icon(Icons.add,size: 30,color: Colors.white,),
                         ),
                     ),
 
@@ -379,10 +387,15 @@ class ListViewClass {
                 margin: EdgeInsets.only(right: 10),
                 child: Column(
                   children: [
-                    Container(
-                        child: CircleAvatar(
-                            radius: 26,
-                            backgroundImage: AssetImage(ListBuilderListClass.newPaymentProfileList[index].assetImgPath))),
+                    InkWell(
+                      onTap: (){
+                        Get.to(ScanAndPayClass());
+                      },
+                      child: Container(
+                          child: CircleAvatar(
+                              radius: 26,
+                              backgroundImage: AssetImage(ListBuilderListClass.newPaymentProfileList[index].assetImgPath))),
+                    ),
 
                     Container(child: Text(ListBuilderListClass.newPaymentProfileList[index].name)),
                   ],
@@ -411,13 +424,14 @@ class ListViewClass {
                 ),
                 child: ListTile(
                   leading: CircleAvatar(
+                    radius: 35,
                     backgroundImage: AssetImage(
                       ListBuilderListClass.paymentContactList[index].assetImgPath,
                     ),
                   ),
 
                   title: Container(
-                    child: Text(ListBuilderListClass.paymentContactList[index].title),
+                    child: Text(ListBuilderListClass.paymentContactList[index].title,style: TextStyle(fontWeight: FontWeight.bold),),
                   ),
                   subtitle: Container(
                     child: Text(ListBuilderListClass.paymentContactList[index].details),

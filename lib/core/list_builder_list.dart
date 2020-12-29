@@ -132,25 +132,20 @@ class ListBuilderListClass {
           name: "Spend Analyzer", iconData: Icons.arrow_forward);
   static PaymentConstClass profileItemListObj2 =
       PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
+          name: "Help & Support", iconData: Icons.arrow_forward);
   static PaymentConstClass profileItemListObj3 =
       PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
+          name: "Payment History", iconData: Icons.arrow_forward);
   static PaymentConstClass profileItemListObj4 =
       PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
+          name: "Payment Settings", iconData: Icons.arrow_forward);
   static PaymentConstClass profileItemListObj5 =
       PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
+          name: "Privacy Settings ", iconData: Icons.arrow_forward);
   static PaymentConstClass profileItemListObj6 =
       PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
-  static PaymentConstClass profileItemListObj7 =
-      PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
-  static PaymentConstClass profileItemListObj8 =
-      PaymentConstClass.ProfileListProperty(
-          name: "Spend Analyzer", iconData: Icons.arrow_forward);
+          name: "Notification", iconData: Icons.arrow_forward);
+
 
   static List<PaymentConstClass> profileItemList = [
     profileItemListObj1,
@@ -159,8 +154,6 @@ class ListBuilderListClass {
     profileItemListObj4,
     profileItemListObj5,
     profileItemListObj6,
-    profileItemListObj7,
-    profileItemListObj8,
   ];
 
   //page no-10; page name:help, help catagory list item========
